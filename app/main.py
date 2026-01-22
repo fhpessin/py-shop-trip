@@ -30,7 +30,6 @@ def shop_trip() -> None:
         if best_shop and min_total_cost <= customer.money:
             print(f"{customer.name} rides to {best_shop.name}\n")
             
-            # ATUALIZAÇÃO: Localização muda ANTES do recibo
             customer.location = best_shop.location
             best_shop.print_receipt(customer.name, customer.product_cart)
             
